@@ -1,0 +1,515 @@
+@charset "ISO-8859-1";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth; 
+}
+body {
+	min-height:100vh;
+	width:100%;
+    background-color: #FBFAF8;
+    font-family: "Poppins", sans-serif;
+    scrollbar-width: none; 
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    background-color:#AB886D;
+    border-bottom: 2px solid #804E49;
+    z-index: 100;
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+nav a,.btn{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+nav a:hover{
+    transform: scale(1.05);
+    color:blue;
+}
+nav h1{
+    font-size: 1.7em;
+    padding-left: 25px;
+    font-family:Pacifico;
+    white-space: nowrap;
+}
+nav li:first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position:fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,255,255,0.2);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: none   ;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/* Background image section */
+.bg-cont {
+    height:80vh;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.sidebar li{
+    width: 100%;
+    white-space: nowrap;
+}
+.sidebar a{
+    width: 100%;
+    
+}
+.menubutton{
+    display: none;
+}
+
+.bg-image {
+    height: 100%;
+    width: 95%;
+    background-image: url(https://img.freepik.com/premium-photo/poor-children-starving-asking-food_910054-39833.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/*staring CSS of how it works */
+#how-it-works {
+	background-color: #f9f9f9;
+	padding: 40px;
+}
+
+#how-it-works h2 {
+	color: #804E49; 
+	text-align: center; 
+	margin-bottom: 30px; 
+}
+
+.steps {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.step {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 20px;
+	margin: 10px;
+	width: 250px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s;
+}
+
+.step h3 {
+	color: #2c3e50;
+}
+
+.step p {
+	color: #7f8c8d;
+}
+
+.step:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.step i {
+	font-size: 24px;
+	color: #698F3F;
+	margin-bottom: 10px;
+	display: block;
+}
+
+hr{
+	margin:0px 30px;
+	border:1px solid black;
+}
+
+/*staring CSS of About US */
+
+
+#about-us {
+    background-color: #f9f9f9; 
+    padding: 40px 20px; 
+    border-radius: 8px; 
+
+}
+
+
+#about-us h2 {
+    color: #804E49;
+    font-size: 2.5em; 
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+
+#about-us h3 {
+    color: #DB4C40; 
+    font-size: 1.75em; 
+    margin-top: 30px; 
+    margin-bottom: 15px; 
+}
+
+
+#about-us p {
+    font-size: 1.1em; 
+    line-height: 1.6; 
+    color: #333; 
+    margin-bottom: 15px; 
+}
+
+
+#about-us h3:last-of-type {
+    color: #698F3F; 
+    text-align: center;
+}
+
+#about-us p:last-of-type {
+    font-weight: bold; 
+}
+
+
+/*staring CSS of Contact US */
+
+#contact-us {
+    background-color: #f9f9f9; /* Light background color for contrast */
+    padding: 40px 20px; /* Padding for space around content */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Heading Styles */
+#contact-us h2 {
+    color: #804E49; /* Primary color for headings */
+    font-size: 2.5em; /* Larger font size for main heading */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center; /* Center alignment */
+}
+
+#contact-us h3 {
+    color: #DB4C40; /* Color for subheadings */
+    font-size: 1.75em; /* Font size for subheadings */
+    margin-top: 30px; /* Space above subheadings */
+    margin-bottom: 15px; /* Space below subheadings */
+}
+
+/* Paragraph Styles */
+#contact-us p {
+    font-size: 1.1em; /* Standard font size for paragraphs */
+    line-height: 1.6; /* Spacing between lines for readability */
+    color: #333; /* Darker text color for contrast */
+    margin-bottom: 15px; /* Space below paragraphs */
+}
+
+/* Contact Info Styles */
+.contact-info {
+    background-color: #E0E0E0; /* Light gray background for contact info */
+    padding: 15px; /* Padding for contact info */
+    border-radius: 5px; /* Rounded corners for contact info */
+    margin-bottom: 20px; /* Space below contact info */
+}
+
+/* Form Styles */
+#contact-form {
+    display: flex; /* Flexbox for form layout */
+    flex-direction: column; /* Column layout */
+}
+
+#contact-form label {
+    margin-top: 10px; /* Space above labels */
+    font-weight: bold; /* Bold labels */
+}
+
+#contact-form input, 
+#contact-form textarea {
+    font-size: 1em; /* Standard font size for inputs */
+    padding: 10px; /* Padding for inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+    margin-top: 5px; /* Space above inputs */
+}
+
+#contact-form button {
+    font-size: 1em; /* Font size for button */
+    height: 40px; /* Button height */
+    width: 120px; /* Button width */
+    background-color: #698F3F; /* Background color for button */
+    border: none; /* No border */
+    color: white; /* Text color for button */
+    margin-top: 15px; /* Space above button */
+    cursor: pointer; /* Pointer cursor for button */
+}
+
+/* Button Hover Effect */
+#contact-form button:hover {
+    background-color: #586e37; /* Darker shade on hover */
+}
+
+
+
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 845px) {
+    .hideOnMobile{
+        display:none;
+    }
+    .menubutton{
+        display: block;
+    }
+
+    .bg-cont {
+        height: 600px; /* Reduce background height on smaller screens */
+    }
+
+    .bg-image {
+        width: 100%; /* Make the background image take full width */
+    }
+    #mobile{
+	    display: flex;
+		align-items:center;
+	}
+	#mobile i{
+		color:rgba(0, 0, 0, 0.8);
+		font-size:1.1em;
+		padding-left:20px;
+	}
+    
+    
+    
+    
+    
+    
+    /* for  about us */
+    
+    #about-us {
+        padding: 20px 10px; /* Adjust padding for smaller screens */
+    }
+
+    #about-us h2 {
+        font-size: 2em; /* Adjust font size for headings */
+    }
+
+    #about-us h3 {
+        font-size: 1.5em; /* Adjust font size for subheadings */
+    }
+
+    #about-us p {
+        font-size: 1em; /* Adjust font size for paragraphs */
+    }
+    
+    
+     /* for  contact us */
+     #contact-us {
+        padding: 20px 10px; /* Adjust padding for smaller screens */
+    }
+
+    #contact-us h2 {
+        font-size: 2em; /* Adjust font size for headings */
+    }
+
+    #contact-us h3 {
+        font-size: 1.5em; /* Adjust font size for subheadings */
+    }
+
+    #contact-us p {
+        font-size: 1em; /* Adjust font size for paragraphs */
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column; /* Stack items vertically on very small screens */
+        height: auto; /* Allow dynamic height */
+    }
+
+    .logo {
+        width: 100%; /* Make the logo take full width */
+        justify-content: center; /* Center the logo */
+    }
+
+    .link {
+        width: 100%; /* Make the link section take full width */
+        flex-wrap: wrap; /* Allow links to wrap */
+        justify-content: center; /* Center the links */
+    }
+
+    .link a {
+        margin: 5px; /* Add some margin between links */
+        font-size: 0.9em; /* Further reduce font size */
+    }
+}
+
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+/*---------------------------------------------------------------------------*/
+
+.main-content {
+    background-color: #f7f9fc;
+    margin-bottom:40px;
+}
+
+.dashboard-container {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align:center;
+}
+
+.overview-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 1 1 calc(33% - 10px);
+    height:150px;  /* Adjust the card width */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 600px) {
+    .overview-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+}
+#add-food{
+	margin:20px 10%;
+}
+
+ h2{
+	color: #333;
+	font-size: 2rem;
+    margin-bottom: 20px;
+    text-align:center;
+}
+#add-food form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#add-food form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#add-food form input, #add-food form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#add-food form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right:45%;
+    margin-left:45%;
+}
+
+#add-food form button:hover {
+    background-color: #218838;
+}
+#view-donations{
+	margin:20px 10%;
+
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+
+
